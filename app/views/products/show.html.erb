@@ -1,9 +1,8 @@
 <div class="container-fluid">
 	<h2><%= @product.full_title %> </h2>
 
-		<% if @product.photo.exists? %>
-			<h2><%= @product.image_url(:square) %> </h2>
-			<img src="<%= @product.image_url(:square) %>" alt="rss feed" />
+		<% if @product.photo.file? %>
+			<img src="<%= @product.image_url(:square) %>" alt="@product.full_title" />
 		<% end %>
 
 		<% @product.prices.each do |prices| %>

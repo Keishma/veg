@@ -19,11 +19,8 @@ class Product < ApplicationRecord
 
 	def image_url(size)
 		the_url = photo.url(size).to_str
-
 		part_one = the_url.split('?')[0]
 		part_two = part_one.split('veggie-assets/')[1]
-
-
 		return 'https://veggie-assets.s3.us-east-2.amazonaws.com/'+part_two
 	end
 

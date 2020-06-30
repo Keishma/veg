@@ -15,9 +15,9 @@
 					<div class="product-box">
 						<%= link_to product, class: 'flex p-img-cont' do %>
 							<div class="product-img">
-								<% if product.image.attached? %>
-									<%= image_tag url_for(product.image) %>
-								<% end %>
+							<% if product.photo.file? %>
+								<img src="<%= product.image_url(:square) %>" alt="product.full_title" />
+							<% end %>
 							</div>
 						<% end %>
 
