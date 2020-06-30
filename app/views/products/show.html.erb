@@ -2,7 +2,7 @@
 	<h2><%= @product.full_title %> </h2>
 
 		<% if @product.photo.file? %>
-			<img src="<%= @product.image_url(:square) %>" alt="@product.full_title" />
+			<img src="<%= @product.image_url(:medium) %>" alt="@product.full_title" />
 		<% end %>
 
 		<% @product.prices.each do |prices| %>

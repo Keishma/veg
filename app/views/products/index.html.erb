@@ -23,19 +23,21 @@
 
 
 							<div class="product-info">
-								<h3><%= link_to product.full_title, product %></h3>
-								<div class="product-info-sub flex">
-									<div class="product-price">
-										<h6><%= product.quantity %></h6>
+								<div class="inner">
+									<h3><%= link_to product.full_title, product %></h3>
+									<div class="product-info-sub flex">
+										<div class="product-price">
+											<h6><%= product.quantity %></h6>
 
-										<% product.prices.where(:current => 1).order(:price).limit(1).each do |prices| %>
-												<h4 class="btn-success"><%= number_to_currency(prices.price, :unit => "£ ") %> </h4> 
-												<p class="text-small"> <%= prices.shop.name %> | <%= prices.last_update %> </p>
-										<% end %>
-									</div>
-									<div class="product-action pl-1">
-										<%= link_to "View", product, class: 'full-width btn btn-primary mb-1' %>
-										<%= link_to "+ £", new_price_path(id: product.id), class: 'full-width btn btn-secondary' %>							
+											<% product.prices.where(:current => 1).order(:price).limit(1).each do |prices| %>
+													<h4 class="btn-success"><%= number_to_currency(prices.price, :unit => "£ ") %> </h4> 
+													<p class="text-small"> <%= prices.shop.name %> | <%= prices.last_update %> </p>
+											<% end %>
+										</div>
+										<div class="product-action pl-1">
+											<%= link_to "View", product, class: 'full-width btn btn-primary mb-1' %>
+											<%= link_to "+ £", new_price_path(id: product.id), class: 'full-width btn btn-secondary' %>							
+										</div>
 									</div>
 								</div>
 							</div>

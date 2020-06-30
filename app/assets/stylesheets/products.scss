@@ -4,16 +4,23 @@
 
 .product-box {
 	display: flex;
-    margin-bottom: -15px;
-
+    // margin-bottom: -15px;
 }
 
 .product-img {
-	width: 100%;
+    width: 100%;
+    position: relative;
+    img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .product-info {
-	width: 66.66%;
+    width: 66.66%;
+    margin-bottom: -15px;
 }
 
 .product-price {
