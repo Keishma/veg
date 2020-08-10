@@ -13,11 +13,17 @@ document.addEventListener("turbolinks:load", function() {
         });
     });
 
-    //   $(document).ready(function () {
-    //     $('#sidebarCollapse').on('click', function () {
-    //         alert("ya cunt");
-    //     });
-    // });
+      $(document).ready(function () {
+        
+        $('#search-icon').on('click', function (e) {
+            e.preventDefault();
+            $('#search-form').addClass('active');
+        });
+        $('#clear-icon').on('click', function (e) {
+            e.preventDefault();
+            $('#search-form').removeClass('active');
+        });
+    });
 
 
     // $('#sidebarCollapse').on('click', function () {
