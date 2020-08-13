@@ -2,15 +2,16 @@
 	<%= form_tag(products_path, :method => "get", id: "search-form") do %>
 		<%= text_field_tag :search, params[:search], placeholder: "Search Products..", :class => 'form-control' %>
 			<i id="clear-icon" class="fas fa-times fa-size"></i>
+			<i id="close-icon" class="fas fa-arrow-left fa-left-arrow"></i>
 		<span id="search-btn" class="input-group-btn">
-			<%= button_tag :submit, class: 'btn btn-green text-white flex' do %>
+			<%= button_tag :submit, class: 'btn text-white flex' do %>
 			    <i class="fas fa-search fa-size"></i>
 			<% end %>
 		</span>
 		<span id="search-icon" class="input-group-btn">
-			<a href="#" class="btn btn-green text-white flex">
+			<div class="btn text-white flex">
 				<i class="fas fa-search fa-size"></i>
-			</a>
+			</div>
     	</span>
 	<% end %>
 </div>

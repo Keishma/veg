@@ -11,19 +11,19 @@ document.addEventListener("turbolinks:load", function() {
             $('.collapse.in').toggleClass('in');
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
-    });
 
-      $(document).ready(function () {
-        
-        $('#search-icon').on('click', function (e) {
-            e.preventDefault();
+        $('#search-icon').on('click', function () {
             $('#search-form').addClass('active');
         });
-        $('#clear-icon').on('click', function (e) {
-            e.preventDefault();
+        $('#close-icon').on('click', function () {
             $('#search-form').removeClass('active');
+            $('#search').val('');
+        });
+        $('#clear-icon').on('click', function () {
+            $('#search').val('');
         });
     });
+
 
 
     // $('#sidebarCollapse').on('click', function () {
