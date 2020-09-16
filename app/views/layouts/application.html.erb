@@ -21,10 +21,11 @@
     <% end %>
 
     <%= render 'layouts/navigation' %>
-    <%= render "products/search_bar" %>
-    <%= render 'layouts/sidebar' %>
 
-    <%= yield %>
+    <%= render 'layouts/sidebar' %>
+    <div class="container container-xl">
+     <%= yield %>
+    </div>
 
   </body>
 

@@ -1,4 +1,4 @@
-<div class="form-inline">
+
 	<%= form_tag(products_path, :method => "get", id: "search-form") do %>
 		<%= text_field_tag :search, params[:search], placeholder: "Search Products..", :class => 'form-control' %>
 			<i id="clear-icon" class="fas fa-times fa-size"></i>
@@ -14,4 +14,3 @@
 			</div>
     	</span>
 	<% end %>
-</div>
